@@ -1,0 +1,25 @@
+@mixin large {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: 767px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (min-width: 559px) {
+    @content;
+  }
+}
+
+$primary-button-background: linear-gradient(
+  82.19deg,
+  #0f3cc0 -21.97%,
+  #1499e4 112.36%
+);
+
+$primary-button-text: #fff;
