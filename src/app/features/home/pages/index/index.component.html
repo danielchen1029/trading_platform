@@ -90,3 +90,45 @@
     </div>
   </div>
 </div>
+<div class="area" style="display: flex; justify-content: center">
+  <div class="img1" style="width: 25%">
+    <img
+      src="./assets/images/10018.png"
+      style="position: relative; left: -4rem"
+    />
+    <div class="description">
+      <h3>One click to sweep anywhere</h3>
+      <p>
+        A simple and user-friendly interface that aggregates the liquidity of
+        NFT marketplaces on various chains, allow users to buy, sell and swap
+        NFTs in one transaction.
+      </p>
+    </div>
+  </div>
+  <img src="./assets/images/10019.png" style="width: 35%; height: 70%" />
+</div>
+<div
+  class="area"
+  style="display: flex; justify-content: center; align-items: center"
+>
+  <div id="content6">
+    <h2>Roadmap</h2>
+    <p-carousel
+      [value]="roadMap"
+      [numVisible]="3"
+      [numScroll]="1"
+      [responsiveOptions]="[]"
+    >
+      <ng-template let-data pTemplate="item">
+        <div class="container">
+          <div class="title">{{ data.title }}</div>
+          <div class="items">
+            <p *ngFor="let item of data.items">
+              {{ item }}
+            </p>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+</div>
