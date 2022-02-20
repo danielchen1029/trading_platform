@@ -12,6 +12,52 @@ body {
   margin: 0;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(20, 23, 26, 0.8);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  display: none;
+
+  .desktop-nav {
+    height: 72px;
+    width: 1366px;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+
+    .logo {
+      width: 220px;
+      height: 40px;
+      text-indent: 101%;
+      overflow: hidden;
+      background-image: url(./assets/images/logo.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: inline-block;
+    }
+
+    @include medium {
+      .logo {
+        display: none;
+      }
+    }
+
+    .btns {
+      display: flex;
+    }
+
+    @include medium {
+      margin-left: 20%;
+    }
+  }
+}
+
 .area {
   height: 100vh;
   background-color: black;
@@ -39,22 +85,40 @@ body {
   border: 1px solid #fff;
 }
 
-#content1 {
-  position: absolute;
-  color: white;
-  width: 40rem;
-  height: 20rem;
-  top: 10rem;
-  left: 10rem;
-
-  h1 {
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 60px;
+@include small {
+  #bg-1 {
+    width: initial !important;
+    height: initial !important;
+    margin-top: 10%;
   }
 
-  .btns {
-    display: flex;
+  #area-1 {
+    flex-direction: column;
+    justify-content: initial !important;
+  }
+
+  #bg-2 {
+    width: 80% !important;
+  }
+
+  #area-4 {
+    flex-direction: column;
+    align-items: center;
+    #img7 {
+      width: 90% !important;
+    }
+
+    #img8 {
+      display: none;
+    }
+  }
+
+  #area-5 {
+    flex-direction: column;
+
+    #img11 {
+      display: none;
+    }
   }
 }
 
@@ -75,9 +139,115 @@ body {
   }
 }
 
+#content1 {
+  position: absolute;
+  color: white;
+  width: 40rem;
+  height: 20rem;
+  top: 10rem;
+  left: 10rem;
+
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 60px;
+  }
+
+  #img2 {
+    width: 25rem;
+  }
+
+  .btns {
+    display: flex;
+  }
+
+  @include small {
+    position: initial;
+    margin-left: 20px;
+    margin-top: 10%;
+    width: initial;
+    height: initial;
+    top: initial;
+
+    #img2 {
+      display: none;
+    }
+
+    #img3 {
+      display: initial !important;
+      margin-top: 5%;
+      width: 20rem;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 10%;
+    }
+  }
+}
+
 #content3 {
   display: flex;
   width: 900px;
+
+  @include small {
+    margin-left: 5%;
+    flex-direction: column;
+    #img4 {
+      width: 40% !important;
+    }
+
+    #img6 {
+      left: -10% !important;
+      top: -22rem !important;
+    }
+  }
+}
+
+#content4 {
+  width: 700px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 10rem;
+
+  @include small {
+    position: initial;
+    top: 0;
+    width: initial;
+  }
+}
+
+#content5 {
+  width: 25%;
+
+  #img9 {
+    position: relative;
+    left: -4rem;
+  }
+
+  #img10 {
+    display: none;
+  }
+
+  @include small {
+    width: initial;
+    margin-left: 5%;
+    #img9 {
+      width: 50%;
+      position: initial;
+      left: 0;
+    }
+
+    #img10 {
+      display: initial;
+      width: 80%;
+      margin-left: 20%;
+    }
+  }
 }
 
 #content6 {
@@ -87,6 +257,114 @@ body {
     font-size: 50px;
     font-weight: 600;
     line-height: 150%;
+  }
+
+  @include small {
+    width: 90%;
+  }
+}
+
+#content7 {
+  h2 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 150%;
+  }
+
+  .partner-list-1 {
+    width: 600px;
+    margin: auto auto 32px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .partner-list-2 {
+    width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .partner-list-1,
+  .partner-list-2 {
+    a {
+      margin-bottom: 16px;
+    }
+    img {
+      max-height: 80px;
+    }
+  }
+
+  @include small {
+    h2 {
+      font-size: 30px;
+    }
+
+    .partner-list-1 {
+      width: 228px;
+    }
+
+    .partner-list-2 {
+      width: 270px;
+    }
+
+    .partner-list-1,
+    .partner-list-2 {
+      a {
+        margin-bottom: 8px;
+      }
+      img {
+        max-height: 42px;
+      }
+    }
+  }
+}
+
+#content8 {
+  h2 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 150%;
+  }
+
+  .investors {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a {
+      margin: 0 16px 48px 0;
+      img {
+        width: 200px;
+        min-width: 200px;
+        transition: 0.25s;
+      }
+    }
+  }
+
+  @include small {
+    h2 {
+      font-size: 25px;
+    }
+
+    .investors {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      a {
+        margin: 0 16px 48px 0;
+        img {
+          width: 120px;
+          min-width: 120px;
+          transition: 0.25s;
+        }
+      }
+    }
   }
 }
 

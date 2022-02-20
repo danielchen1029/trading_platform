@@ -1,9 +1,26 @@
-<div class="area" style="display: flex; justify-content: end">
+<nav #nav>
+  <div class="desktop-nav">
+    <a href="/" class="logo"></a>
+    <div class="btns">
+      <button class="button" style="margin-right: 20px">
+        Launch App
+        <i
+          class="pi pi-arrow-circle-right"
+          style="font-size: 1.2rem; margin-left: 5px; margin-top: 3px"
+        ></i>
+      </button>
+      <button class="button secondary">Docs</button>
+    </div>
+  </div>
+</nav>
+
+<div class="area" id="area-1" style="display: flex; justify-content: end">
   <div id="content1">
     <div class="flex">
-      <img src="./assets/images/10004.svg" />
-      <img src="./assets/images/10005.svg" style="width: 25rem" />
+      <img id="img1" src="./assets/images/10004.svg" />
+      <img id="img2" src="./assets/images/10005.svg" />
     </div>
+    <img id="img3" src="./assets/images/10005.svg" style="display: none" />
     <h1>One Stop Cross-Chain Aggregator for DeFi &amp; Metaverse.</h1>
     <div class="btns">
       <button class="button" style="margin-right: 20px">
@@ -17,7 +34,11 @@
     </div>
     <div data-v-6b76a5fe="" class="buttons"></div>
   </div>
-  <img src="./assets/images/10006.png" style="width: 70%; height: 100%" />
+  <img
+    id="bg-1"
+    src="./assets/images/10006.png"
+    style="width: 70%; height: 100%"
+  />
 </div>
 <div
   class="area"
@@ -28,7 +49,7 @@
     align-items: center;
   "
 >
-  <img src="./assets/images/10008.svg" style="width: 50%" />
+  <img id="bg-2" src="./assets/images/10008.svg" style="width: 50%" />
 </div>
 <div
   class="area"
@@ -41,14 +62,15 @@
 >
   <div id="content3">
     <div class="left-area">
-      <img src="./assets/images/10010.svg" style="width: 60%" />
-      <img src="./assets/images/10012.png" style="width: 90%" />
+      <img id="img4" src="./assets/images/10010.svg" style="width: 60%" />
+      <img id="img5" src="./assets/images/10012.png" style="width: 90%" />
     </div>
     <div
       class="right-area"
       style="position: relative; display: flex; align-items: end"
     >
       <img
+        id="img6"
         src="./assets/images/10013.png"
         style="width: 50%; position: absolute; right: 10px; top: -10px"
       />
@@ -63,22 +85,10 @@
     </div>
   </div>
 </div>
-<div class="area" style="display: flex">
-  <img src="./assets/images/10015.svg" style="width: 50%" />
-  <div
-    class="right-area"
-    style="
-      width: 700px;
-      height: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      position: relative;
-      top: 10rem;
-    "
-  >
-    <img src="./assets/images/gamefi.png" style="width: 60%" />
+<div class="area" id="area-4" style="display: flex">
+  <img id="img7" src="./assets/images/10015.svg" style="width: 50%" />
+  <div id="content4">
+    <img id="img8" src="./assets/images/gamefi.png" style="width: 60%" />
     <div class="description" style="width: 50%">
       <h3>Play to Earn</h3>
       <p>
@@ -90,13 +100,11 @@
     </div>
   </div>
 </div>
-<div class="area" style="display: flex; justify-content: center">
-  <div class="img1" style="width: 25%">
-    <img
-      src="./assets/images/10018.png"
-      style="position: relative; left: -4rem"
-    />
+<div class="area" id="area-5" style="display: flex; justify-content: center">
+  <div id="content5">
+    <img id="img9" src="./assets/images/10018.png" />
     <div class="description">
+      <img id="img10" src="./assets/images/10019.png" />
       <h3>One click to sweep anywhere</h3>
       <p>
         A simple and user-friendly interface that aggregates the liquidity of
@@ -105,7 +113,11 @@
       </p>
     </div>
   </div>
-  <img src="./assets/images/10019.png" style="width: 35%; height: 70%" />
+  <img
+    id="img11"
+    src="./assets/images/10019.png"
+    style="width: 35%; height: 70%"
+  />
 </div>
 <div
   class="area"
@@ -117,7 +129,7 @@
       [value]="roadMap"
       [numVisible]="3"
       [numScroll]="1"
-      [responsiveOptions]="[]"
+      [responsiveOptions]="roadMapResponsive"
     >
       <ng-template let-data pTemplate="item">
         <div class="container">
@@ -130,5 +142,47 @@
         </div>
       </ng-template>
     </p-carousel>
+  </div>
+</div>
+<div
+  class="area"
+  style="display: flex; justify-content: center; align-items: center"
+>
+  <div id="content7">
+    <h2>Partners & Investors</h2>
+    <div class="partner-list-1">
+      <a target="_blank"><img src="./assets/images/appwork.svg" /></a>
+      <a target="_blank"><img src="./assets/images/appwork.svg" /></a>
+      <a target="_blank"><img src="./assets/images/appwork.svg" /></a>
+      <a target="_blank"><img src="./assets/images/appwork.svg" /></a>
+      <a target="_blank"><img src="./assets/images/appwork.svg" /></a>
+    </div>
+    <div class="partner-list-2">
+      <a target="_blank"><img src="./assets/images/appwork.svg" /></a>
+      <a target="_blank"><img src="./assets/images/appwork.svg" /></a>
+      <a target="_blank"><img src="./assets/images/appwork.svg" /></a>
+      <a target="_blank"><img src="./assets/images/appwork.svg" /></a>
+      <a target="_blank"><img src="./assets/images/appwork.svg" /></a>
+      <a target="_blank"><img src="./assets/images/appwork.svg" /></a>
+      <a target="_blank"><img src="./assets/images/appwork.svg" /></a>
+      <a target="_blank"><img src="./assets/images/appwork.svg" /></a>
+      <a target="_blank"><img src="./assets/images/appwork.svg" /></a>
+      <a target="_blank"><img src="./assets/images/appwork.svg" /></a>
+      <a target="_blank"><img src="./assets/images/appwork.svg" /></a>
+    </div>
+  </div>
+</div>
+<div
+  class="area"
+  style="display: flex; justify-content: center; align-items: center"
+>
+  <div id="content8">
+    <h2>Angel Investors</h2>
+    <div class="investors">
+      <a target="_blank"><img src="./assets/images/investor-1.png" /></a>
+      <a target="_blank"><img src="./assets/images/investor-1.png" /></a>
+      <a target="_blank"><img src="./assets/images/investor-1.png" /></a>
+      <a target="_blank"><img src="./assets/images/investor-1.png" /></a>
+    </div>
   </div>
 </div>
